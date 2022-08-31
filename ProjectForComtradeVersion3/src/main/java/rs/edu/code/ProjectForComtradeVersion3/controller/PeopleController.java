@@ -45,15 +45,10 @@ public class PeopleController {
         peopleService.delete(id);
     }
 
-
-
-
-
-
-
-
-
-
-
+    @DeleteMapping("/{PeopleId}/{PersonId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deletePerson(@PathVariable Long PeopleId, @PathVariable Long PersonId) {
+        peopleService.deletePerson(PeopleId, PersonId);
+    }
 
 }
