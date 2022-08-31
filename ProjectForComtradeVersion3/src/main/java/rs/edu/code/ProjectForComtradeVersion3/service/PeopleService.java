@@ -18,7 +18,6 @@ public class PeopleService {
         return peopleRepository.save(people);
     }
 
-
     public List<People> getAll() {
         return peopleRepository.findAll();
     }
@@ -33,5 +32,13 @@ public class PeopleService {
         dbGroup.setPersons(updateGroup.getPersons());
         return peopleRepository.save(dbGroup);
     }
+
+    public void delete(Long id) {
+        peopleRepository.deleteById(id);
+    }
+
+
+
+
 
 }
